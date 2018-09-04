@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#7f000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/mediacontroller_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@color/transparent"
+            android:src="@mipmap/icon_video_controller_pause" />
+
+        <SeekBar
+            android:id="@+id/mediacontroller_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_full"
+            android:layout_toRightOf="@+id/mediacontroller_play_pause"
+            android:focusable="true"
+            android:max="1000"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:progressDrawable="@drawable/seekbar_video"
+            android:thumb="@mipmap/icon_video_controller_now"
+            android:thumbOffset="0dp" />
+
+        <TextView
+            android:id="@+id/mediacontroller_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mediacontroller_seekbar"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/iv_full"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@color/transparent"
+            android:clickable="false"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_video_controller_zoom" />
+    </RelativeLayout>
+
+</LinearLayout>

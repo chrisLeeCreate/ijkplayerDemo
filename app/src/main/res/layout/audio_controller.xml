@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="#b2ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal" >
+        <ImageButton
+            android:id="@+id/mediacontroller_play_pause"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="#00000000"
+            android:src="@mipmap/icon_audio_controller_pause" />
+
+        <TextView
+            android:id="@+id/mediacontroller_time_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:textSize="12sp"
+            android:textColor="#7c7c7c"
+            android:layout_toRightOf="@id/mediacontroller_play_pause" />
+
+        <TextView
+            android:id="@+id/mediacontroller_time_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textSize="12sp"
+            android:textColor="#7c7c7c"
+            android:layout_marginRight="20dp" />
+
+        <SeekBar
+            android:id="@+id/mediacontroller_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/mediacontroller_time_total"
+            android:layout_toRightOf="@id/mediacontroller_time_current"
+            android:focusable="true"
+            android:thumb="@mipmap/icon_audio_controller_now"
+            android:thumbOffset="0dp"
+            android:progressDrawable="@drawable/seekbar_audio"
+            android:max="1000" />
+    </RelativeLayout>
+
+</LinearLayout>

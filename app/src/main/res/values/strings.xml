@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">xesIjkPlayer</string>
+    <string name="ijkplayer">视频播放器</string>
+    <string name="ijkAudio">音频播放器</string>
+</resources>
